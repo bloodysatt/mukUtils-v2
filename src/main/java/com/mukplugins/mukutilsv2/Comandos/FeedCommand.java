@@ -14,21 +14,24 @@ public class FeedCommand implements CommandExecutor {
             if (!(sender instanceof Player)) {
                 sender.sendMessage(ChatColor.RED + "Apenas jogadores podem usar este comando");
 
-                return false;
-            } else {
+            }
+
                 Player player = (Player) sender;
-                if (player.getFoodLevel() <20) {
+            if (player.hasPermission("muk.feed")) {
+                if (player.getFoodLevel() < 20) {
                     player.setFoodLevel(20);
                     player.setSaturation(20);
 
                     player.sendMessage(ChatColor.GREEN + "Yummy!");
 
 
-                }else {
+                } else {
                     player.sendMessage(ChatColor.RED + "O Jogador não tem fome.");
                 }
 
-            }
+            } else {
+                    player.sendMessage(ChatColor.RED + "Você não tem permissão para executar este comando.");
+                }
 
         }
 

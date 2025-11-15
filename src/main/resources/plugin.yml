@@ -6,11 +6,10 @@ main: com.mukplugins.mukutilsv2.MukUtils
 commands:
   feed:
     description: "restaura a vida do jogador"
-    permission: muk.feed
-    permission-message: "Você não tem permissão para executar este comando."
 
   heal:
     description: "restaura a vida do jogador"
-    permission: muk.heal
-    permission-message: "Você não tem permissão para executar este comando."
+
+  fly:
+    description: "faz o jogador ganhar asas e voar"
 

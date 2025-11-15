@@ -12,9 +12,9 @@ public class HealCommand implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("heal")) {
             if (!(sender instanceof Player)) {
                 sender.sendMessage(ChatColor.RED + "Apenas Jogadores podem usar este comando.");
-                return false;
-            } else {
+            }
                 Player player = (Player) sender;
+            if (player.hasPermission("muk.heal")) {
                 if (player.getHealth() < 20) {
 
                     player.setHealth(20);
@@ -22,6 +22,8 @@ public class HealCommand implements CommandExecutor {
                 } else {
                     player.sendMessage(ChatColor.RED + "O Jogador já tem a vida no máximo");
                 }
+            } else {
+                player.sendMessage(ChatColor.RED + "Você não tem permissão para executar este comando.");
             }
 
 
