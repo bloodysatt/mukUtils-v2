@@ -8,6 +8,9 @@ Commands:
   - /feed
   - /heal
   - /fly
+  - /tpa
+  - /tpaccept
+  - /tpadeny
 
 
 
@@ -16,3 +19,4 @@ Permissions:
  - muk.feed
  - muk.heal
  - muk.fly
+ - muk.tpa.sent
