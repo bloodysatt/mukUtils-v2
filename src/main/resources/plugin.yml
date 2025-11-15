@@ -1,0 +1,11 @@
+name: mukUtils-v2
+version: '${project.version}'
+authors: [mukPlugins, SattMustDie]
+main: com.mukplugins.mukutilsv2.MukUtils
+
+commands:
+  feed:
+    aliases: eat, food, comer
+    usage: /feed
+    permission: muk.feed
+    permission-message: "You don´t have permission to do this"
