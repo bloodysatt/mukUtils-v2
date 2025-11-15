@@ -1,5 +1,6 @@
 package com.mukplugins.mukutilsv2.Comandos;
 
+import com.mukplugins.mukutilsv2.MukUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -18,12 +19,12 @@ public class HealCommand implements CommandExecutor {
                 if (player.getHealth() < 20) {
 
                     player.setHealth(20);
-                    player.sendMessage(ChatColor.GREEN + "Curado com sucesso!");
+                    player.sendMessage(MukUtils.prefix + ChatColor.GREEN + "Curado com sucesso!");
                 } else {
-                    player.sendMessage(ChatColor.RED + "O Jogador já tem a vida no máximo");
+                    player.sendMessage(MukUtils.prefix + ChatColor.RED + "O Jogador já tem a vida no máximo");
                 }
             } else {
-                player.sendMessage(ChatColor.RED + "Você não tem permissão para executar este comando.");
+                player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você não tem permissão para executar este comando.");
             }
 
 

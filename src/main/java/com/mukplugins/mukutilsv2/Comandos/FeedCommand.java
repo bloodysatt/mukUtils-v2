@@ -1,5 +1,6 @@
 package com.mukplugins.mukutilsv2.Comandos;
 
+import com.mukplugins.mukutilsv2.MukUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -22,15 +23,15 @@ public class FeedCommand implements CommandExecutor {
                     player.setFoodLevel(20);
                     player.setSaturation(20);
 
-                    player.sendMessage(ChatColor.GREEN + "Yummy!");
+                    player.sendMessage(MukUtils.prefix + ChatColor.GREEN + "Yummy!");
 
 
                 } else {
-                    player.sendMessage(ChatColor.RED + "O Jogador não tem fome.");
+                    player.sendMessage(MukUtils.prefix + ChatColor.RED + "O Jogador não tem fome.");
                 }
 
             } else {
-                    player.sendMessage(ChatColor.RED + "Você não tem permissão para executar este comando.");
+                    player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você não tem permissão para executar este comando.");
                 }
 
         }

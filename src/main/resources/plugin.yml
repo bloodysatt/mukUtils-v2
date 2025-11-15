@@ -13,3 +13,12 @@ commands:
   fly:
     description: "faz o jogador ganhar asas e voar"
 
+  tpa:
+    description: "manda um pedido de tpa para alguem"
+
+  tpaccept:
+    description: "aceita o pedido de tpa pendente"
+
+  tpadeny:
+    description: "recusa o pedido de tpa pendente"
+

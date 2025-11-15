@@ -1,5 +1,6 @@
 package com.mukplugins.mukutilsv2.Comandos;
 
+import com.mukplugins.mukutilsv2.MukUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,18 +21,18 @@ public class FlyCommand implements CommandExecutor {
                 if (!(player.getAllowFlight())){
                     player.setAllowFlight(true);
                     player.setFlying(true);
-                    player.sendMessage(ChatColor.GREEN + "Você ganhou asas!");
+                    player.sendMessage(MukUtils.prefix + ChatColor.GREEN + "Você ganhou asas!");
                 } else {
 
                     player.setAllowFlight(false);
                     player.setFlying(false);
-                    player.sendMessage(ChatColor.RED + "Você parou de voar");
+                    player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você parou de voar");
                 }
 
 
 
             } else {
-                player.sendMessage(ChatColor.RED + "Você não tem permissão para executar este comando.");
+                player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você não tem permissão para executar este comando.");
             }
 
 
