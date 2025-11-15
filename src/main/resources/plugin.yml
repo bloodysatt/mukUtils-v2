@@ -5,7 +5,12 @@ main: com.mukplugins.mukutilsv2.MukUtils
 
 commands:
   feed:
-    aliases: eat, food, comer
-    usage: /feed
+    description: "restaura a vida do jogador"
     permission: muk.feed
-    permission-message: "You don´t have permission to do this"
+    permission-message: "Você não tem permissão para executar este comando."
+
+  heal:
+    description: "restaura a vida do jogador"
+    permission: muk.heal
+    permission-message: "Você não tem permissão para executar este comando."
+

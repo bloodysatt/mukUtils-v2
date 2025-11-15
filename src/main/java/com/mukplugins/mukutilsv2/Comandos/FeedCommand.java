@@ -14,15 +14,20 @@ public class FeedCommand implements CommandExecutor {
             if (!(sender instanceof Player)) {
                 sender.sendMessage(ChatColor.RED + "Apenas jogadores podem usar este comando");
 
-                return true;
+                return false;
             } else {
                 Player player = (Player) sender;
-                player.setFoodLevel(20);
-                player.setSaturation(20);
+                if (player.getFoodLevel() <20) {
+                    player.setFoodLevel(20);
+                    player.setSaturation(20);
 
-                player.sendMessage(ChatColor.GREEN + "Yummy!");
+                    player.sendMessage(ChatColor.GREEN + "Yummy!");
 
-                return false;
+
+                }else {
+                    player.sendMessage(ChatColor.RED + "O Jogador não tem fome.");
+                }
+
             }
 
         }
