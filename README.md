@@ -8,10 +8,13 @@ Commands:
   - /feed
   - /heal
   - /fly
-  - /tpa
+  - /tpa 
   - /tpaccept
   - /tpadeny
-
+  - /setwarp
+  - /delwarp
+  - /warps
+  - /warp
 
 
 
@@ -20,3 +23,7 @@ Permissions:
  - muk.heal
  - muk.fly
  - muk.tpa.sent
+ - muk.warp.set
+ - muk.warp.delete
+ - muk.warp.list
+ - muk.warp.use
