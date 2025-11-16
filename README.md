@@ -1,6 +1,9 @@
 Current in development
+
 Spigot Version: 1.8.X
-Devs: MukPlugins, bloodysatt
+
+Dev: bloodysatt
+
 
 A Simple Essentials like plugin for your Server
 

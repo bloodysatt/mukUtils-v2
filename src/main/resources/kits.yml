@@ -1,0 +1,10 @@
+Kits:
+  starter:
+    items: "276-1, 278-1, 279-1"
+    cooldown: 86400 # 1 dia
+  vip:
+    items: "276-1, 278-2"
+    cooldown: 3600 # 1 hora
+  nodelay:
+    items: "1-64"
+    cooldown: 0 # 0 cooldown

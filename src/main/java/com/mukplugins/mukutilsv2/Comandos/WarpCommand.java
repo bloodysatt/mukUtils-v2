@@ -44,7 +44,6 @@ public class WarpCommand implements CommandExecutor {
         }
     }
 
-    // Este método salva os warps da memória para o arquivo
     public static void saveWarpsToFile(JavaPlugin plugin) {
         warpsConfig.set("warps", null);
         for (String name : warps.keySet()) {
@@ -125,7 +124,6 @@ public class WarpCommand implements CommandExecutor {
             return true;
         }
 
-        // --- Lógica para /warps ---
         if (command.getName().equalsIgnoreCase("warps")) {
             if (!(sender instanceof Player)) {
                 sender.sendMessage(MukUtils.prefix + MukUtils.SenderError);
