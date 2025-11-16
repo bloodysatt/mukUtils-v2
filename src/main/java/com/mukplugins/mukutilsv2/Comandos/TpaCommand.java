@@ -19,20 +19,20 @@ public class TpaCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage("Apenas Jogadores podem executar este comando");
+            sender.sendMessage(MukUtils.prefix + MukUtils.SenderError);
             return true;
         }
         Player player = (Player) sender;
 
         if ((command.getName().equalsIgnoreCase("tpa"))) {
             if (!(player.hasPermission("muk.tpa.sent"))) {
-                player.sendMessage(ChatColor.RED + "Você não tem permissão para executar este comando");
+                player.sendMessage(MukUtils.prefix + MukUtils.PermissionError);
 
                 return true;
             }
 
             if (args.length != 1) {
-                player.sendMessage(ChatColor.RED + "utilização correta: /tpa [Jogador]");
+                player.sendMessage( MukUtils.prefix + ChatColor.RED + "utilização correta: /tpa [Jogador]");
 
                 return true;
             }
@@ -87,6 +87,6 @@ public class TpaCommand implements CommandExecutor {
 
         }
 
-        return true;
+        return false;
     }
 }

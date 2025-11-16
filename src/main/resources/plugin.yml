@@ -22,3 +22,14 @@ commands:
   tpadeny:
     description: "recusa o pedido de tpa pendente"
 
+  setwarp:
+    description: "seta uma warp"
+
+  delwarp:
+    description: "deleta uma warp já existente"
+
+  warps:
+    description: "lista todas as warps disponíveis no servidor"
+
+  warp:
+    description: "teleporta o jogador para uma warp"

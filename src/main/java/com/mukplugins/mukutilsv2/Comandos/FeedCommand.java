@@ -13,7 +13,9 @@ public class FeedCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("feed")) {
             if (!(sender instanceof Player)) {
-                sender.sendMessage(ChatColor.RED + "Apenas jogadores podem usar este comando");
+                sender.sendMessage(MukUtils.prefix + MukUtils.SenderError);
+
+                return true;
 
             }
 
@@ -25,13 +27,18 @@ public class FeedCommand implements CommandExecutor {
 
                     player.sendMessage(MukUtils.prefix + ChatColor.GREEN + "Yummy!");
 
+                    return true;
 
                 } else {
                     player.sendMessage(MukUtils.prefix + ChatColor.RED + "O Jogador não tem fome.");
+
+                    return true;
                 }
 
             } else {
-                    player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você não tem permissão para executar este comando.");
+                    player.sendMessage(MukUtils.prefix + MukUtils.PermissionError);
+
+                    return true;
                 }
 
         }

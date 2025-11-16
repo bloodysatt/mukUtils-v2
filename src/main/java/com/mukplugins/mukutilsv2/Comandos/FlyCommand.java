@@ -12,7 +12,8 @@ public class FlyCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("fly")) {
             if (!(sender instanceof Player)) {
-                sender.sendMessage("Apenas jogadores podem utilizar este comando");
+                sender.sendMessage(MukUtils.prefix + MukUtils.SenderError);
+                return true;
             }
             Player player = (Player) sender;
             if (player.hasPermission("muk.fly")) {
@@ -22,17 +23,23 @@ public class FlyCommand implements CommandExecutor {
                     player.setAllowFlight(true);
                     player.setFlying(true);
                     player.sendMessage(MukUtils.prefix + ChatColor.GREEN + "Você ganhou asas!");
+
+                    return true;
                 } else {
 
                     player.setAllowFlight(false);
                     player.setFlying(false);
                     player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você parou de voar");
+
+                    return true;
                 }
 
 
 
             } else {
-                player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você não tem permissão para executar este comando.");
+                player.sendMessage(MukUtils.prefix + MukUtils.PermissionError);
+
+                return true;
             }
 
 
