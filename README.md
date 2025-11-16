@@ -15,6 +15,7 @@ Commands:
   - /delwarp
   - /warps
   - /warp
+  - /kit
 
 
 
@@ -27,3 +28,4 @@ Permissions:
  - muk.warp.delete
  - muk.warp.list
  - muk.warp.use
+ - muk.kit.use

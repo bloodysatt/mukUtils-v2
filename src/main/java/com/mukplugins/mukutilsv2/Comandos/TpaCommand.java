@@ -13,6 +13,7 @@ import java.util.UUID;
 
 public class TpaCommand implements CommandExecutor {
 
+
     //onde ficam guardados os pedidos de tpa
     private static HashMap<UUID, UUID> requests = new HashMap<>();
 

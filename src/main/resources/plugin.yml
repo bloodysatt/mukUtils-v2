@@ -33,3 +33,6 @@ commands:
 
   warp:
     description: "teleporta o jogador para uma warp"
+
+  kit:
+    description: "dá um kit ao jogador"

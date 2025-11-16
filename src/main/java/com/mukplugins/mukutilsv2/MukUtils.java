@@ -1,6 +1,7 @@
 package com.mukplugins.mukutilsv2;
 
 import com.mukplugins.mukutilsv2.Comandos.*;
+import com.mukplugins.mukutilsv2.MukKits.KitCommands;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -15,6 +16,7 @@ public final class MukUtils extends JavaPlugin {
     public void onEnable() {
 
         WarpCommand.loadWarpsFromFile(this);
+        KitCommands.loadKitsfromFile(this);
 
         this.getCommand("feed").setExecutor(new FeedCommand());
         this.getCommand("heal").setExecutor(new HealCommand());
@@ -26,6 +28,7 @@ public final class MukUtils extends JavaPlugin {
         this.getCommand("delwarp").setExecutor(new WarpCommand());
         this.getCommand("warps").setExecutor(new WarpCommand());
         this.getCommand("warp").setExecutor(new WarpCommand());
+        this.getCommand("kit").setExecutor(new KitCommands());
 
 
         Bukkit.getServer().getConsoleSender().sendMessage(prefix + "Plugin Habilitado!");
