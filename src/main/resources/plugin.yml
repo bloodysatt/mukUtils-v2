@@ -36,3 +36,6 @@ commands:
 
   kit:
     description: "dá um kit ao jogador"
+
+  tell:
+    description: "mande uma mensagem a um jogador"

@@ -49,6 +49,7 @@ public final class MukUtils extends JavaPlugin {
         this.getCommand("delwarp").setExecutor(new WarpCommand());
         this.getCommand("warps").setExecutor(new WarpCommand());
         this.getCommand("warp").setExecutor(new WarpCommand());
+        this.getCommand("tell").setExecutor(new TellCommand());
 
 
         this.getCommand("kit").setExecutor(new KitCommands(this));
