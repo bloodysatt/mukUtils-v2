@@ -19,6 +19,7 @@ Commands:
   - /warps
   - /warp
   - /kit
+  - /tell
 
 
 
@@ -32,3 +33,4 @@ Permissions:
  - muk.warp.list
  - muk.warp.use
  - muk.kit.use
+ - mukutils.tell
