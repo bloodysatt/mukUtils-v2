@@ -29,7 +29,7 @@ public class TellCommand implements CommandExecutor {
 
         if (command.getName().equalsIgnoreCase("tell")){
 
-            if (!(player.hasPermission("mukutils.tell"))) {
+            if (!(player.hasPermission("muk.tell"))) {
 
                 player.sendMessage(MukUtils.prefix + MukUtils.PermissionError);
 
@@ -59,6 +59,11 @@ public class TellCommand implements CommandExecutor {
                 player.sendMessage(MukUtils.prefix + ChatColor.RED + "Você não pode mandar mensagem para si próprio");
 
                 return true;
+
+            }
+
+            if (!(target.isOnline())) {
+                player.sendMessage(MukUtils.prefix + ChatColor.RED + "Este Jogador está offline");
 
             }
 
