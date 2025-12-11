@@ -36,23 +36,21 @@ public class TellCommand implements CommandExecutor {
                 return true;
             }
 
-            if (args.length < 1 ) {
+            if (args.length < 2) {
 
                 player.sendMessage(MukUtils.prefix + ChatColor.RED + "Utilização correta: /tell (Jogador) (Mensagem)");
-
                 return true;
-
-            }
-            if (args.length > 2 ) {
-
-                player.sendMessage(MukUtils.prefix + ChatColor.RED + "Utilização correta: /tell (Jogador) (Mensagem)");
-
-                return true;
-
             }
 
             Player target = Bukkit.getPlayer(args[0]);
-            String message = args[1];
+
+            StringBuilder messageBuilder = new StringBuilder();
+            for (int i = 1; i < args.length; i++) {
+                messageBuilder.append(args[i]).append(" ");
+
+            }
+
+            String message = messageBuilder.toString().trim();
 
             if (target == player) {
 
@@ -62,10 +60,6 @@ public class TellCommand implements CommandExecutor {
 
             }
 
-            if (!(target.isOnline())) {
-                player.sendMessage(MukUtils.prefix + ChatColor.RED + "Este Jogador está offline");
-
-            }
 
 
             if (target != null) {
@@ -84,6 +78,11 @@ public class TellCommand implements CommandExecutor {
                     return true;
                 }
                 return true;
+            } else {
+                player.sendMessage(MukUtils.prefix + ChatColor.RED + "Este Jogador está offline");
+
+                return true;
+
             }
 
 
