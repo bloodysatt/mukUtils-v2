@@ -33,4 +33,4 @@ Permissions:
  - muk.warp.list
  - muk.warp.use
  - muk.kit.use
- - mukutils.tell
+ - muk.tell
